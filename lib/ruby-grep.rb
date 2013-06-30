@@ -1,0 +1,6 @@
+require 'ruby-grep/directory'
+require 'ruby-grep/expression'
+require 'ruby-grep/file'
+require 'colorize'
+require 'ruby-grep/line'
+require 'debugger'
