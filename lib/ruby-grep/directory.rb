@@ -7,7 +7,8 @@ module RubyGrep
     end
 
     def files
-      @files ||= Dir.glob(::File.join("**", "{*.*,.*}")).select { |f| ::File.file?(f) }.map { |file_name| RubyGrep::File.new("#{@path}/#{file_name}") }
+      @files ||= Dir.glob(::File.join("#{@path}", "**", "{*,.*}")).select { |f| ::File.file?(f) }.
+      map { |file_name| RubyGrep::File.new("#{file_name}") }
     end
 
   end

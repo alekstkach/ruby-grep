@@ -7,7 +7,7 @@ module RubyGrep
     end
 
     def value
-      @expression
+      @expression.force_encoding("UTF-8")
     end
 
     private

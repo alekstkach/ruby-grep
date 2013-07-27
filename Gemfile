@@ -19,3 +19,7 @@ group :development do
 end
 
 gem "colorize"
+
+group :development, :test do
+  gem "debugger"
+end
