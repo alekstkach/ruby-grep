@@ -5,6 +5,7 @@ describe RubyGrep::Directory do
   it "finds all files in the directory and sub directories" do
     Dir.mkdir(TEMP_DIRECTORY_SPEC_TEST_PATH)
     Dir.mkdir(TEMP_DIRECTORY_SPEC_TEST_PATH_INNER)
+    Dir.mkdir(TEMP_DIRECTORY_SPEC_TEST_PATH_INNER_2ND_LEVEL)
     # `touch #{DIRECTORY_SPEC_TEST_PATH}/file#{n}`
     5.times do |n|
       FileUtils.touch(TEMP_DIRECTORY_SPEC_TEST_PATH + "/file#{n}")
@@ -12,8 +13,11 @@ describe RubyGrep::Directory do
     5.times do |n|
       FileUtils.touch(TEMP_DIRECTORY_SPEC_TEST_PATH_INNER + "/file#{n}")
     end
+    5.times do |n|
+      FileUtils.touch(TEMP_DIRECTORY_SPEC_TEST_PATH_INNER_2ND_LEVEL + "/file#{n}")
+    end
 
-    RubyGrep::Directory.new(TEMP_DIRECTORY_SPEC_TEST_PATH).files.length.should == 10
+    RubyGrep::Directory.new(TEMP_DIRECTORY_SPEC_TEST_PATH).files.length.should == 15
 
     FileUtils.rm_rf(TEMP_DIRECTORY_SPEC_TEST_PATH)
     # %x{rm -rf #{TEMP_DIRECTORY_SPEC_TEST_PATH}}

@@ -1,4 +1,6 @@
 
 TEMP_DIRECTORY_SPEC_TEST_PATH = File.dirname(__FILE__) + '/directory_spec_test'
 
-TEMP_DIRECTORY_SPEC_TEST_PATH_INNER = File.dirname(__FILE__) + '/directory_spec_test/nested_dir_test'
+TEMP_DIRECTORY_SPEC_TEST_PATH_INNER = TEMP_DIRECTORY_SPEC_TEST_PATH + '/nested_dir_test'
+
+TEMP_DIRECTORY_SPEC_TEST_PATH_INNER_2ND_LEVEL = TEMP_DIRECTORY_SPEC_TEST_PATH_INNER + '/nested_dir_level_2_test'
