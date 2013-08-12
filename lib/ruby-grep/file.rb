@@ -6,12 +6,14 @@ module RubyGrep
 
     attr_reader :file_name
 
-    def initialize(file_name)
-      @lines = ::File.readlines(file_name)
+    def initialize(fn)
+      @lines = ::File.readlines(fn)
       @lines.map! { |line| RubyGrep::Line.new(line, @lines.index(line), self) }
-      @file_name = file_name
+      @file_name = fn
     end
-
+    
+    # this method selects lines from the file that match the expression, 
+    # which may be a string or regexp.
     def match(expression)
       @lines.select { |line| line.contents.match(expression.value) }
     end
@@ -20,10 +22,6 @@ module RubyGrep
       filename = @file_name.scan(/\/(\.?\w+\.\w+)|(\.\w+)/).join
       colorised_filename = filename.colorize(:yellow)
       @file_name.gsub(filename, colorised_filename)
-    end
-
-    def no_files_message(file)
-      raise "No files to search in" unless file.exists?
     end
 
     def max_line_number_length

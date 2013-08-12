@@ -1,0 +1,7 @@
+Commenting is here to help enhance the documentation.
+For example, code samples, or clarification of the documentation.
+If you have questions about Ruby or the documentation, please post to one of the Ruby mailing lists.
+If you have questions about Ruby or the documentation, please post to one of the Ruby mailing lists.
+You will get better, faster, help that way. ruby
+You will get better, faster, help that way. ruby
+You will get better, faster, help that way. ruby
