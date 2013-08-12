@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
     "lib/ruby-grep/file.rb",
     "lib/ruby-grep/line.rb",
     "ruby-grep screenshot.png",
+    "ruby-grep.gemspec",
     "spec/directory_spec.rb",
     "spec/expression_spec.rb",
     "spec/file_spec.rb",
