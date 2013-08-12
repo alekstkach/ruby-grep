@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "ruby-grep"
-  s.version = ""
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["aleks tkach"]
@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.markdown",
     "Rakefile",
+    "VERSION",
     "bin/ruby-grep",
     "lib/ruby-grep.rb",
     "lib/ruby-grep/directory.rb",
