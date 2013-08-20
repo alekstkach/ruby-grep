@@ -14,6 +14,5 @@ ruby-grep dir_name (string | regexp)
 TODO
 ----
 1. This program is too slow cause written in ruby, rewrite back-end so that it uses original grep
-2. Fix utf-8 error
 
 ![Screenshot](https://github.com/alekstkach/ruby-grep/raw/master/ruby-grep screenshot.png)

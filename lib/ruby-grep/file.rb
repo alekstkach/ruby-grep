@@ -1,4 +1,4 @@
-# encoding UTF-8
+# encoding: UTF-8
 
 module RubyGrep
   
@@ -7,7 +7,7 @@ module RubyGrep
     attr_reader :file_name
 
     def initialize(fn)
-      @lines = ::File.readlines(fn)
+      @lines = ::File.read(fn).encode!('UTF-8', 'UTF-8', :invalid => :replace).split("\n")
       @lines.map! { |line| RubyGrep::Line.new(line, @lines.index(line), self) }
       @file_name = fn
     end
