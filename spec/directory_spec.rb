@@ -22,16 +22,16 @@ describe RubyGrep::Directory do
     Dir.mkdir(TEMP_DIR)
     Dir.mkdir(TEMP_DIR + '/nested_level1')
     5.times do |n|
-      FileUtils.touch(TEMP_DIRECTORY_SPEC_TEST_PATH + "/file#{n}")
+      FileUtils.touch(TEMP_DIR + "/file#{n}")
     end
     5.times do |n|
-      FileUtils.touch(TEMP_DIRECTORY_SPEC_TEST_PATH_INNER + "/file#{n}")
+      FileUtils.touch(TEMP_DIR + "/file#{n}")
     end
-    file_objects_array = RubyGrep::Directory.new(TEMP_DIRECTORY_SPEC_TEST_PATH).files
+    file_objects_array = RubyGrep::Directory.new(TEMP_DIR).files
     file_objects_array.each do |file|
       file.is_a?(RubyGrep::File).should == true
     end
-    FileUtils.rm_rf(TEMP_DIRECTORY_SPEC_TEST_PATH)
+    FileUtils.rm_rf(TEMP_DIR)
   end
 
 end
